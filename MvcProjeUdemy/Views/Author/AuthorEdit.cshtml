@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrete.Author
+@{
+    ViewBag.Title = "AuthorEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AuthorEdit</h2>
+
+<form class="form-group" method="post">
+    @Html.Label("Yazar ID")
+    @Html.TextBoxFor(x => x.AuthorID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yazar Adı Soyadı")
+    @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim Yolu")
+    @Html.TextBoxFor(x => x.AuthorImage, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yazar Yetenekler")
+    @Html.TextBoxFor(x => x.AboutShort, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yazarın Statüsü")
+    @Html.TextBoxFor(x => x.AuthorTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Hakkında")
+    @Html.TextAreaFor(x => x.AuthorAbout, 3, 20, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yazar Mail")
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yazarın Telefon Numarası")
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yazar Şifre")
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
